@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+    font-family: monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    text-align: center;
+    margin: 4;
+    font-size: 24px;
+    border: #ddd;
+}
+
+section {
+    padding: 20px 0;
+}
+
+#about {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    background:whitesmoke;
+    text-align: center;
+    border: #333;
+}
+
+#about img {
+    border-radius: 70%;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #333;
+}
+
+#about p{
+    font-family: sans-serif,futura;
+    text-align: center;
+    margin:4;
+    font-size: 20px;
+    color:black;
+}
+
+#skills h2 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+#skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #skills li {
+            margin-bottom: 10px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        .skill-name {
+            flex: 1;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .progress-bar {
+            flex: 3;
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .progress-bar div {
+            height: 100%;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            border-radius: 5px;
+        }
+#projects{
+    background-color: whitesmoke;
+}
+#projects h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 550;
+    text-align: center;
+}
+
+#projects .project {
+    margin-bottom: 50px;
+}
+
+#projects .project h3 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        background-color: whitesmoke;
+        background-blend-mode: difference;
+}
+
+.project-description {
+            display: none; /* Hide project descriptions by default */
+            margin-left: 30px;
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: 500;
+            background-color: whitesmoke;
+            background-blend-mode: 20%; 
+        }
+
+        .project-button {
+            margin-left: 26px;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color:black;
+            color: white;
+            text-decoration: whitesmoke;
+            border-radius: 5px;
+            cursor: grab;
+        }
+        .show {
+        display: block !important; /* Show project description when .show class is added */
+    }
+#projects img {
+    margin-left: 30px;
+    width: 60%;
+    height: 60%;
+    height: auto;
+    border: 5px solid #333;
+}
+
+#resume h2
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+    font-size: 32px;
+    font-weight: 550;
+    margin: 10px;
+    text-align: center;
+}
+#resume a {
+    display: block;
+    margin-top: 20px;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+#contact{
+    background-color: whitesmoke;
+}
+
+#contact h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 550;
+    text-align: center;
+    margin: 10px auto;
+}
+#contact p {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    fill: #333;
+    margin-top: 0px;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Sambarta Chattopadhyay</h1>
+            <p>Web Developer | AI Enthusiast | SQL</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="C:\Users\DGASERLAP177\Desktop\CodSoft\Task_1\Images\Passport_Picture_cropped.jpeg" alt="Your Image">
+                <p>Hello! I'm a passionate web developer with experience in creating dynamic and responsive websites. I have expertise in HTML, CSS, JavaScript, and various front-end frameworks. My goal is to build user-friendly and accessible web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2><centre>Skills</centre></h2>
+            <ul>
+                <li class="skill">
+                    <span class="skill-name">HTML</span>
+                    <div class="progress-bar">
+                        <div style="width: 90%; background: black;">90%</div>
+                    </div>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">CSS</span>
+                    <div class="progress-bar">
+                        <div style="width: 85%; background: black;">85%</div>
+                    </div>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="progress-bar">
+                        <div style="width: 75%; background: black;">75%</div>
+                    </div>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">React</span>
+                    <div class="progress-bar">
+                        <div style="width: 70%; background: black;">70%</div>
+                    </div>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">Node.js</span>
+                    <div class="progress-bar">
+                        <div style="width: 65%; background: black;">65%</div>
+                    </div>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">Python</span>
+                    <div class="progress-bar">
+                        <div style="width: 80%; background: black;">80%</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Diabetic Retinopathy Detection</h3>
+                <img src="C:\Users\DGASERLAP177\Desktop\CodSoft\Task_1\Images\Insulyser.png" alt="Project 1 Image">
+                <p class="project-description">This Project involves a systematic tool which can enhance Diabetic Retinopathy detection. It is trained with a humongous dataset to successfully diagnose mitigating human error</p>
+                <a href="#" class="project-button">View Details</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>My Resume</h2>
+            <a href="C:\Users\DGASERLAP177\Desktop\CodSoft\Task_1\Resume_1.pdf" download>Download My Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:sambartacandoit2001@gmail.com">sambartacandoit2001@gmail.com</a></p>
+            <p>Phone: <a href="+91 7059721600">+91 7059721600</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sambarta Chattopadhyay. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".project-button");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const project = this.parentElement;
+                    const description = project.querySelector(".project-description");
+                    description.classList.toggle("show");
+
+                    // Toggle button text
+                    if (description.classList.contains("show")) {
+                        this.textContent = "Hide Details";
+                    } else {
+                        this.textContent = "View Details";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
