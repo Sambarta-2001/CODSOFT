@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+            margin: 0;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .display {
+            grid-column: span 4;
+            background-color: #444;
+            color: white;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: #666;
+            color: white;
+            border: none;
+            font-size: 1.5em;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .operator {
+            background-color: #ff9500;
+        }
+
+        .clear {
+            grid-column: span 2;
+        }
+
+        .calculate {
+            grid-column: span 2;
+            background-color: #ff5e5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <button class="operator" value="+">+</button>
+        <button class="operator" value="-">-</button>
+        <button class="operator" value="*">&times;</button>
+        <button class="operator" value="/">÷</button>
+        <button class="number" value="7">7</button>
+        <button class="number" value="8">8</button>
+        <button class="number" value="9">9</button>
+        <button class="number" value="4">4</button>
+        <button class="number" value="5">5</button>
+        <button class="number" value="6">6</button>
+        <button class="number" value="1">1</button>
+        <button class="number" value="2">2</button>
+        <button class="number" value="3">3</button>
+        <button class="number" value="0">0</button>
+        <button id="clear" class="clear">C</button>
+        <button id="calculate" class="calculate">=</button>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+const operators = document.querySelectorAll('.operator');
+const numbers = document.querySelectorAll('.number');
+const clearButton = document.getElementById('clear');
+const calculateButton = document.getElementById('calculate');
+
+let currentInput = '';
+let currentOperator = '';
+let previousInput = '';
+
+numbers.forEach(number => {
+    number.addEventListener('click', () => {
+        currentInput += number.value;
+        updateDisplay();
+    });
+});
+
+operators.forEach(operator => {
+    operator.addEventListener('click', () => {
+        if (currentInput !== '') {
+            if (previousInput !== '') {
+                calculate();
+            } else {
+                previousInput = currentInput;
+            }
+            currentOperator = operator.value;
+            currentInput = '';
+            updateDisplay();
+        }
+    });
+});
+
+clearButton.addEventListener('click', () => {
+    clear();
+    updateDisplay();
+});
+
+calculateButton.addEventListener('click', () => {
+    calculate();
+    updateDisplay();
+});
+
+function clear() {
+    currentInput = '';
+    currentOperator = '';
+    previousInput = '';
+}
+
+function calculate() {
+    if (currentInput !== '' && previousInput !== '') {
+        let result;
+        switch (currentOperator) {
+            case '+':
+                result = parseFloat(previousInput) + parseFloat(currentInput);
+                break;
+            case '-':
+                result = parseFloat(previousInput) - parseFloat(currentInput);
+                break;
+            case '*':
+                result = parseFloat(previousInput) * parseFloat(currentInput);
+                break;
+            case '/':
+                result = parseFloat(previousInput) / parseFloat(currentInput);
+                break;
+            default:
+                return;
+        }
+        currentInput = result.toString();
+        previousInput = '';
+        currentOperator = '';
+    }
+}
+
+function updateDisplay() {
+    display.textContent = currentInput === '' ? '0' : currentInput;
+}
+
+    </script>
+</body>
+</html>
