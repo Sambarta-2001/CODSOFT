@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">CODSOFT</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to Our Landing Page</h2>
+            <p>Discover our amazing services and features.</p>
+            <a href="#" class="btn" id="learn-more-btn">Learn More</a>
+        </div>
+        <!-- Learn More Modal -->
+        <div id="learn-more-modal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About CodSoft</h2>
+            <p>Codsoft is a versatile software solution designed to streamline coding processes and enhance developer productivity. Here are some key details about Codsoft:
+
+                Integrated Development Environment (IDE): Codsoft provides a powerful IDE equipped with features like syntax highlighting, code completion, and debugging tools to facilitate efficient coding.
+                
+                Version Control: It offers robust version control features, allowing developers to manage code changes, collaborate seamlessly, and track project history using popular version control systems like Git.
+                
+                Code Refactoring: Codsoft includes built-in code refactoring tools that enable developers to improve the structure and maintainability of their codebase by automatically restructuring and optimizing code.
+                
+                Code Quality Analysis: With Codsoft's code quality analysis tools, developers can identify and address potential issues such as code smells, duplication, and performance bottlenecks, ensuring high-quality software development.
+                
+                Customization: Codsoft is highly customizable, allowing developers to tailor the IDE environment to their specific preferences and workflow requirements, enhancing overall productivity and user experience.
+                
+                Support for Multiple Programming Languages: Codsoft supports a wide range of programming languages, including but not limited to Java, Python, JavaScript, C/C++, and Ruby, making it suitable for diverse development projects.
+                
+                Collaboration Features: It offers collaboration features such as code review tools, real-time collaboration, and integrations with communication platforms like Slack, enabling effective teamwork and knowledge sharing among developers.
+                
+                Continuous Integration/Continuous Deployment (CI/CD) Integration: Codsoft seamlessly integrates with CI/CD pipelines, enabling automated building, testing, and deployment of applications, thereby accelerating the software delivery process.</p>
+        </div>
+</div>
+
+    </section>
+    
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Real-Time Analytics Dashboard</h3>
+                    <p>Stay informed with our real-time analytics dashboard. Access critical metrics and performance indicators instantly, customize views, and make data-driven decisions.</p>
+                </div>
+                <div class="feature">
+                    <h3>Advanced Customer Segmentation</h3>
+                    <p>Boost marketing with advanced customer segmentation. Our machine learning models analyze customer data to create precise segments, improving targeting and engagement.</p>
+                </div>
+                <div class="feature">
+                    <h3>Automated Invoice Processing</h3>
+                    <p>Enhance efficiency with automated invoice processing. Our system uses OCR and machine learning to extract, validate, and process invoices, reducing manual effort and errors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials and Reviews</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Great service! Nice Work!"</p>
+                    <h4>- John Doe</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Amazing experience! Amazing Work!"</p>
+                    <h4>- Jane Smith</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="C:\Users\DGASERLAP177\Desktop\CodSoft\Task_12\Images\Gallery_1.jpg" alt="Image 1"></div>
+                <div class="gallery-item"><img src="C:\Users\DGASERLAP177\Desktop\CodSoft\Task_12\Images\Gallery_2.webp" alt="Image 2"></div>
+                <div class="gallery-item"><img src="C:\Users\DGASERLAP177\Desktop\CodSoft\Task_12\Images\Gallery_6.webp" alt="Image 3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <!-- Contact form fields -->
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <div id="thank-you-message" style="display: none;">Thank you for contacting us!</div>
+        </div>
+    </section>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sambarta Chattopadhyay. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Contact Form Submission
+    var form = document.getElementById('contact-form');
+    var thankYouMessage = document.getElementById('thank-you-message');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Display the thank you message
+        thankYouMessage.style.display = 'block';
+
+        // Reset the form fields (optional)
+        form.reset();
+    });
+
+    
+    // Modal functionality
+    var learnMoreBtn = document.getElementById('learn-more-btn');
+    var modal = document.getElementById('learn-more-modal');
+    var span = document.getElementsByClassName('close')[0];
+
+    learnMoreBtn.onclick = function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        modal.style.display = 'block';
+    }
+
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+});
+
+    </script>
+</body>
+</html>

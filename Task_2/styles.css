@@ -1,0 +1,320 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial, sans-serif';
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .logo {
+    float: left;
+    font-size: 32px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url(https://unsplash.com/photos/male-walking-down-the-steps-with-doordash-bag---TNnaty-z4);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    z-index: 1;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+#learn-more-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#hero h2 {
+    color: black;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    color:black;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: whitesmoke;
+    border-radius: 10px;
+    border:none;
+    
+}
+
+/* Features Section */
+#features {
+    padding: 50px 0;
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 400;
+    border: #333;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature {
+    flex: 1;
+    padding: 30px;
+    background: #f4f4f4;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+#testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    border: #333;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #444;
+    text-align: center;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 0;
+}
+
+#gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    border: #333;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 10px);
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    border: #333;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input,
+#contact textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#thankYouMessage {
+    display: none;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style the Thank You Message */
+#thankYouMessage p {
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
